@@ -26,38 +26,38 @@
  *  The Sample App header file containing version information
  */
 
-#ifndef SEND_VECTOR3_APP_VERSION_H
-#define SEND_VECTOR3_APP_VERSION_H
+#ifndef VEC_APP_VERSION_H
+#define VEC_APP_VERSION_H
 
 /* Development Build Macro Definitions */
 
-#define SEND_VECTOR3_APP_BUILD_NUMBER 1 /*!< Development Build: Number of commits since baseline */
-#define SEND_VECTOR3_APP_BUILD_BASELINE \
+#define VEC_APP_BUILD_NUMBER 1 /*!< Development Build: Number of commits since baseline */
+#define VEC_APP_BUILD_BASELINE \
     "v1.2.0-rc1" /*!< Development Build: git tag that is the base for the current development */
 
 /* Version Macro Definitions */
 
-#define SEND_VECTOR3_APP_MAJOR_VERSION 1  /*!< @brief ONLY APPLY for OFFICIAL releases. Major version number. */
-#define SEND_VECTOR3_APP_MINOR_VERSION 1  /*!< @brief ONLY APPLY for OFFICIAL releases. Minor version number. */
-#define SEND_VECTOR3_APP_REVISION      1 /*!< @brief ONLY APPLY for OFFICIAL releases. Revision version number. */
-#define SEND_VECTOR3_APP_MISSION_REV   0  /*!< @brief ONLY USED by MISSION Implementations. Mission revision */
+#define VEC_APP_MAJOR_VERSION 1  /*!< @brief ONLY APPLY for OFFICIAL releases. Major version number. */
+#define VEC_APP_MINOR_VERSION 1  /*!< @brief ONLY APPLY for OFFICIAL releases. Minor version number. */
+#define VEC_APP_REVISION      1 /*!< @brief ONLY APPLY for OFFICIAL releases. Revision version number. */
+#define VEC_APP_MISSION_REV   0  /*!< @brief ONLY USED by MISSION Implementations. Mission revision */
 
-#define SEND_VECTOR3_APP_STR_HELPER(x) #x /*!< @brief Helper function to concatenate strings from integer macros */
-#define SEND_VECTOR3_APP_STR(x) \
-    SEND_VECTOR3_APP_STR_HELPER(x) /*!< @brief Helper function to concatenate strings from integer macros */
+#define VEC_APP_STR_HELPER(x) #x /*!< @brief Helper function to concatenate strings from integer macros */
+#define VEC_APP_STR(x) \
+    VEC_APP_STR_HELPER(x) /*!< @brief Helper function to concatenate strings from integer macros */
 
 /*! @brief Development Build Version Number.
  * @details Baseline git tag + Number of commits since baseline. @n
  * See @ref cfsversions for format differences between development and release versions.
  */
-#define SEND_VECTOR3_APP_VERSION SEND_VECTOR3_APP_BUILD_BASELINE "+dev" SEND_VECTOR3_APP_STR(SEND_VECTOR3_APP_BUILD_NUMBER)
+#define VEC_APP_VERSION VEC_APP_BUILD_BASELINE "+dev" VEC_APP_STR(VEC_APP_BUILD_NUMBER)
 
 /*! @brief Development Build Version String.
  * @details Reports the current development build's baseline, number, and name. Also includes a note about the latest
  * official version. @n See @ref cfsversions for format differences between development and release versions.
  */
-#define SEND_VECTOR3_APP_VERSION_STRING                       \
-    " Sample App DEVELOPMENT BUILD " SEND_VECTOR3_APP_VERSION \
+#define VEC_APP_VERSION_STRING                       \
+    " Sample App DEVELOPMENT BUILD " VEC_APP_VERSION \
     ", Last Official Release: v1.1.0" /* For full support please use this version */
 
-#endif /* SEND_VECTOR3_APP_VERSION_H */
+#endif /* VEC_APP_VERSION_H */

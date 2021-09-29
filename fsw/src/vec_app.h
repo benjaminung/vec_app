@@ -26,8 +26,8 @@
  * Main header file for the SAMPLE application
  */
 
-#ifndef SEND_VECTOR3_APP_H
-#define SEND_VECTOR3_APP_H
+#ifndef VEC_APP_H
+#define VEC_APP_H
 
 /*
 ** Required header files.
@@ -38,12 +38,12 @@
 #include "cfe_sb.h"
 #include "cfe_es.h"
 
-#include "send_vector3_app_perfids.h"
-#include "send_vector3_app_msgids.h"
-#include "send_vector3_app_msg.h"
+#include "vec_app_perfids.h"
+#include "vec_app_msgids.h"
+#include "vec_app_msg.h"
 
 /***********************************************************************/
-#define SEND_VECTOR3_APP_PIPE_DEPTH 32 /* Depth of the Command Pipe for Application */
+#define VEC_APP_PIPE_DEPTH 32 /* Depth of the Command Pipe for Application */
 /************************************************************************
 ** Type Definitions
 *************************************************************************/
@@ -62,12 +62,12 @@ typedef struct
     /*
     ** Housekeeping telemetry packet...
     */
-    SEND_VECTOR3_APP_HkTlm_t HkTlm;
+    VEC_APP_HkTlm_t HkTlm;
 
     /*
     ** RandAssNum telemetry packet
     */
-    SEND_VECTOR3_APP_RandAssNum_t RndAssNum;
+    VEC_APP_Vector3_t Vector3;
 
     /*
     ** Run Status variable used in the main processing loop
@@ -85,21 +85,21 @@ typedef struct
     char   PipeName[CFE_MISSION_MAX_API_LEN];
     uint16 PipeDepth;
 
-    CFE_EVS_BinFilter_t EventFilters[SEND_VECTOR3_APP_EVENT_COUNTS];
+    CFE_EVS_BinFilter_t EventFilters[VEC_APP_EVENT_COUNTS];
 
-} SEND_VECTOR3_APP_Data_t;
+} VEC_APP_Data_t;
 
 /****************************************************************************/
 /*
 ** Local function prototypes.
 **
-** Note: Except for the entry point (SEND_VECTOR3_APP_Main), these
+** Note: Except for the entry point (VEC_APP_Main), these
 **       functions are not called from any other source module.
 */
-void  SEND_VECTOR3_APP_Main(void);
-int32 SEND_VECTOR3_APP_Init(void);
-int32 SEND_VECTOR3_APP_ResetCounters(const SEND_VECTOR3_APP_ResetCountersCmd_t *Msg);
-int32 SEND_VECTOR3_APP_Process(const SEND_VECTOR3_APP_ProcessCmd_t *Msg);
-int32 SEND_VECTOR3_APP_Noop(const SEND_VECTOR3_APP_NoopCmd_t *Msg);
+void  VEC_APP_Main(void);
+int32 VEC_APP_Init(void);
+int32 VEC_APP_ResetCounters(const VEC_APP_ResetCountersCmd_t *Msg);
+int32 VEC_APP_Process(const VEC_APP_ProcessCmd_t *Msg);
+int32 VEC_APP_Noop(const VEC_APP_NoopCmd_t *Msg);
 
-#endif /* SEND_VECTOR3_APP_H */
+#endif /* VEC_APP_H */

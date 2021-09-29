@@ -26,9 +26,9 @@
  * Define Sample App Performance IDs
  */
 
-#ifndef SEND_VECTOR3_APP_PERFIDS_H
-#define SEND_VECTOR3_APP_PERFIDS_H
+#ifndef VEC_APP_PERFIDS_H
+#define VEC_APP_PERFIDS_H
 
-#define SEND_VECTOR3_APP_PERF_ID 91
+#define VEC_APP_PERF_ID 91
 
-#endif /* SEND_VECTOR3_APP_PERFIDS_H */
+#endif /* VEC_APP_PERFIDS_H */

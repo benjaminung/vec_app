@@ -28,13 +28,14 @@
  * \note The Sample App assumes default configuration which uses V1 of message id implementation
  */
 
-#ifndef SEND_VECTOR3_APP_MSGIDS_H
-#define SEND_VECTOR3_APP_MSGIDS_H
+#ifndef VEC_APP_MSGIDS_H
+#define VEC_APP_MSGIDS_H
 
 /* V1 Command Message IDs must be 0x18xx */
-#define SEND_VECTOR3_APP_CMD_MID     0x1882
-#define SEND_VECTOR3_APP_SEND_HK_MID 0x1883
+#define VEC_APP_CMD_MID     0x1882
+#define VEC_APP_SEND_HK_MID 0x1883
 /* V1 Telemetry Message IDs must be 0x08xx */
-#define SEND_VECTOR3_APP_HK_TLM_MID 0x0883
+#define VEC_APP_HK_TLM_MID 0x0883
+#define VEC_APP_VECTOR3_MID 0x0884
 
-#endif /* SEND_VECTOR3_APP_MSGIDS_H */
+#endif /* VEC_APP_MSGIDS_H */

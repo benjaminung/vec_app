@@ -26,15 +26,15 @@
  * Define SAMPLE App  Messages and info
  */
 
-#ifndef SEND_VECTOR3_APP_MSG_H
-#define SEND_VECTOR3_APP_MSG_H
+#ifndef VEC_APP_MSG_H
+#define VEC_APP_MSG_H
 
 /*
 ** SAMPLE App command codes
 */
-#define SEND_VECTOR3_APP_NOOP_CC           0
-#define SEND_VECTOR3_APP_RESET_COUNTERS_CC 1
-#define SEND_VECTOR3_APP_PROCESS_CC        2
+#define VEC_APP_NOOP_CC           0
+#define VEC_APP_RESET_COUNTERS_CC 1
+#define VEC_APP_PROCESS_CC        2
 
 /*************************************************************************/
 
@@ -44,7 +44,7 @@
 typedef struct
 {
     CFE_MSG_CommandHeader_t CmdHeader; /**< \brief Command header */
-} SEND_VECTOR3_APP_NoArgsCmd_t;
+} VEC_APP_NoArgsCmd_t;
 
 /*
 ** The following commands all share the "NoArgs" format
@@ -53,9 +53,9 @@ typedef struct
 ** allows them to change independently in the future without changing the prototype
 ** of the handler function
 */
-typedef SEND_VECTOR3_APP_NoArgsCmd_t SEND_VECTOR3_APP_NoopCmd_t;
-typedef SEND_VECTOR3_APP_NoArgsCmd_t SEND_VECTOR3_APP_ResetCountersCmd_t;
-typedef SEND_VECTOR3_APP_NoArgsCmd_t SEND_VECTOR3_APP_ProcessCmd_t;
+typedef VEC_APP_NoArgsCmd_t VEC_APP_NoopCmd_t;
+typedef VEC_APP_NoArgsCmd_t VEC_APP_ResetCountersCmd_t;
+typedef VEC_APP_NoArgsCmd_t VEC_APP_ProcessCmd_t;
 
 /*************************************************************************/
 /*
@@ -67,12 +67,23 @@ typedef struct
     uint8 CommandErrorCounter;
     uint8 CommandCounter;
     uint8 spare[2];
-} SEND_VECTOR3_APP_HkTlm_Payload_t;
+} VEC_APP_HkTlm_Payload_t;
 
 typedef struct
 {
     CFE_MSG_TelemetryHeader_t  TlmHeader; /**< \brief Telemetry header */
-    SEND_VECTOR3_APP_HkTlm_Payload_t Payload;   /**< \brief Telemetry payload */
-} SEND_VECTOR3_APP_HkTlm_t;
+    VEC_APP_HkTlm_Payload_t Payload;   /**< \brief Telemetry payload */
+} VEC_APP_HkTlm_t;
 
-#endif /* SEND_VECTOR3_APP_MSG_H */
+typedef struct 
+{
+    CFE_MSG_TelemetryHeader_t TlmHeader;
+    uint8 CommandErrorCounter;
+    uint8 CommandCounter;
+    uint32 x;
+    uint32 y;
+    uint32 z;
+} VEC_APP_Vector3_t;
+
+
+#endif /* VEC_APP_MSG_H */

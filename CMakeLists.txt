@@ -2,6 +2,7 @@ project(CFE_VEC_APP C)
 
 include_directories(fsw/mission_inc)
 include_directories(fsw/platform_inc)
+include_directories(../ros_app/fsw/platform_inc)
 
 # Create the app module
 add_cfe_app(vec_app fsw/src/vec_app.c)

@@ -101,5 +101,8 @@ int32 VEC_APP_Init(void);
 int32 VEC_APP_ResetCounters(const VEC_APP_ResetCountersCmd_t *Msg);
 int32 VEC_APP_Process(const VEC_APP_ProcessCmd_t *Msg);
 int32 VEC_APP_Noop(const VEC_APP_NoopCmd_t *Msg);
+void VEC_APP_ProcessCommandPacket(CFE_SB_Buffer_t *SBBufPtr);
+void VEC_APP_ProcessVecMsg(CFE_SB_Buffer_t *SBBufPtr);
+bool VEC_APP_VerifyCmdLength(CFE_MSG_Message_t *MsgPtr, size_t ExpectedLength);
 
 #endif /* VEC_APP_H */

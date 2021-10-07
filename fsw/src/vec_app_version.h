@@ -57,7 +57,7 @@
  * official version. @n See @ref cfsversions for format differences between development and release versions.
  */
 #define VEC_APP_VERSION_STRING                       \
-    " Sample App DEVELOPMENT BUILD " VEC_APP_VERSION \
+    " VEC_APP DEVELOPMENT BUILD " VEC_APP_VERSION \
     ", Last Official Release: v1.1.0" /* For full support please use this version */
 
 #endif /* VEC_APP_VERSION_H */

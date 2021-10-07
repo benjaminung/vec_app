@@ -37,5 +37,6 @@
 /* V1 Telemetry Message IDs must be 0x08xx */
 #define VEC_APP_HK_TLM_MID 0x0883
 #define VEC_APP_VECTOR3_MID 0x0884
+#define VEC_APP_ROSVEC3_MID 0x0885
 
 #endif /* VEC_APP_MSGIDS_H */
